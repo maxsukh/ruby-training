@@ -2,8 +2,13 @@ RSpec.describe 'arrays' do
   it 'can be created like any other object' do
     empty = []
 
+<<<<<<< HEAD
     expect(empty.class).to eq Array
     expect(empty.size).to eq 0
+=======
+    expect(empty.class).to eq(__)
+    expect(empty.size).to eq(__)
+>>>>>>> upstream/main
   end
 
   it 'can also be created using an array literal' do
@@ -19,7 +24,7 @@ RSpec.describe 'arrays' do
     expect(array).to eq([1, 2, 333])
   end
 
-  it 'provides the subscript operator for accessing elements' do
+  it 'provides the subscript (index), operator for accessing elements' do
     array = ['New York', 'Paris', 'London', 'Milan']
 
     expect(array[0]).to eq('New York')
@@ -40,6 +45,7 @@ RSpec.describe 'arrays' do
   it 'can be sliced' do
     array = ['New York', 'Paris', 'London', 'Milan']
 
+<<<<<<< HEAD
     expect(array.slice(0, 1)).to eq(['New York'])
     expect(array.slice(0, 2)).to eq(['New York', 'Paris'])
     expect(array.slice(3, 3)).to eq(['Milan'])
@@ -52,6 +58,22 @@ RSpec.describe 'arrays' do
 
   it 'is similar to a range' do
     expect((1..5).class).to eq(Range)
+=======
+    expect(array.slice(0, 1)).to eq(__)
+    expect(array.slice(0, 2)).to eq(__)
+    expect(array.slice(3, 3)).to eq(__)
+    expect(array.slice(2, 20)).to eq(__)
+    expect(array.slice(4, 0)).to eq(__)
+    expect(array.slice(4, 10)).to eq(__)
+    expect(array.slice(5, 0)).to eq(__)
+    expect(array.slice(1, 1)).to eq(__)
+    expect(array.slice(2, 1)).to eq(__)
+  end
+
+  it 'is similar to a range' do
+    expect((1..5).class).to eq(__)
+    # Given these two items are not equal what do we expect to do with the tests below?
+>>>>>>> upstream/main
     expect([1, 2, 3, 4, 5]).not_to eq((1..5))
     expect([1, 2, 3, 4, 5]).to eq((1..5).to_a)
     expect([1, 2, 3, 4]).to eq((1...5).to_a)
@@ -81,6 +103,7 @@ RSpec.describe 'arrays' do
   it 'can be used as a queue' do
     array = [:first, :second]
     array.push(:third)
+    expect(array).to eq(__)
 
     value = array.shift
     expect(value).to eq(:first)
