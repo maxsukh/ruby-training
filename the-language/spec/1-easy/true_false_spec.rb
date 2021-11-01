@@ -31,7 +31,6 @@ RSpec.describe 'true/truthy and false/falsy' do
   # These are useful, if awkwardly named matchers
   context 'rspec matchers' do
     it 'matches truthy things with be_truthy' do
-      pending 'REMOVE THIS LINE TO CONTINUE, ONCE YOU UNDERSTAND THE CODE BELOW'
       expect(true).to be_truthy
       expect(1).to be_truthy
       expect(0).to be_truthy
@@ -42,7 +41,6 @@ RSpec.describe 'true/truthy and false/falsy' do
     end
 
     it 'matches falsey things with be_falsey' do
-      pending 'REMOVE THIS LINE TO CONTINUE, ONCE YOU UNDERSTAND THE CODE BELOW'
       expect(false).to be_falsey
       expect(nil).to be_falsey
     end
@@ -53,8 +51,8 @@ RSpec.describe 'true/truthy and false/falsy' do
     end
 
     it 'can match false exactly with be(false) or eq(false) matchers' do
-      expect(false).to be(__)
-      expect(false).to eq(__)
+      expect(false).to be(false)
+      expect(false).to eq(false)
     end
   end
 end
