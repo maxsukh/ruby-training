@@ -162,10 +162,10 @@ RSpec.describe 'a ruby class' do
     expect(array.to_s).to eq('[1, 2, 3]')
     expect(array.inspect).to eq('[1, 2, 3]')
 
-    expect('STRING'.to_s).to eq(__)
-    expect('STRING'.inspect).to eq(__)
+    expect('STRING'.to_s).to eq('STRING')
+    expect('STRING'.inspect).to eq("\"STRING\"")
 
-    expect(Dog.to_s).to eq(__)
-    expect(Dog.inspect).to eq(__)
+    expect(Dog.to_s).to eq('Dog')
+    expect(Dog.inspect).to eq('Dog')
   end
 end
