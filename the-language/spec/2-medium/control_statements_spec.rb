@@ -83,7 +83,7 @@ RSpec.describe 'control statements' do
       result = result * i
       i += 1
     end
-    expect(result).to eq()  #needs clarification
+    expect(result).to eq(3628800)  #result value changes each iteration and is taken from previous iteration
   end
 
   it 'has a break statement' do
@@ -95,7 +95,7 @@ RSpec.describe 'control statements' do
       result = result * i
       i += 1
     end
-    expect(result).to eq()   #needs clarification
+    expect(result).to eq(3628800)   
   end
 
   it 'can return a value with break' do
