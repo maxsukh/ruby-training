@@ -7,13 +7,8 @@ RSpec.describe 'methods in ruby' do
     expect(a_global_method(5, 9)).to eq(14)
   end
 
-<<<<<<< HEAD
-  it 'is possible to call a method without parens' do
-    expect(a_global_method(4, 8)).to eq(12)
-=======
   it 'is possible to call a method without parentheses' do
-    expect(a_global_method 4, 8).to eq(__)
->>>>>>> upstream/main
+    expect(a_global_method 4, 8).to eq(12)
   end
 
   it 'is sometimes ambiguous to leave out parentheses' do
