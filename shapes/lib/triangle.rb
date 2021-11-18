@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  if (a == b && a == c && b == c)
+    equilateral = :equilateral
+  end
 end
 
 # Error class used in invalid_triangle_spec. No need to change this code.
