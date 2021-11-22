@@ -7,9 +7,11 @@ def quadrilateral(a, b, c, d)
     raise QuadrilateralError
   elsif (a == 90 && b == 90 && c == 90 && d == 90)
     quadrilateral = [:square,:rectangle]
-  elsif (a == b || a == c || a == d || b == c || b == d)
+  elsif ((a == b && c == d) || (a == c && b == d) || (a == d && b == c))
     quadrilateral = [:parallelogram, :rhombus]
   elsif (a != b || a != c || a != d || b != c || b != d)
+    quadrilateral = [:quadrilateral]
+  elsif ((a == b && c != d) || (a == c && b != d) || (a == d && b != c))
     quadrilateral = [:quadrilateral]
   end
 end
