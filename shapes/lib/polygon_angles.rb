@@ -8,6 +8,6 @@ end
 
 def external_angle(number_of_sides)
   if number_of_sides in 5..10
-    internal_angle = (360.0 / number_of_sides).round(2)
+    external_angle = (360.0 / number_of_sides).round(2)
   end
 end
