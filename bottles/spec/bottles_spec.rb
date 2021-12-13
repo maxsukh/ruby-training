@@ -39,7 +39,7 @@ describe Bottles do
   end
 
   it 'can sing the whole bottles' do
-    skip
+    #skip
     expect(bottles.sing).to eq(bottles.verses(99, 0))
   end
 end

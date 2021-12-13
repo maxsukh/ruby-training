@@ -11,7 +11,7 @@ class Bottles
             verse_1
         elsif number_of_bottles == 2
             verse_2
-        elsif number_of_bottles == 0
+        else number_of_bottles == 0
             verse_0
         end
     end
@@ -35,6 +35,10 @@ class Bottles
     end
 
     def verses(first, last)
-            first.downto(last).map {|item| verse(item)}.join("\n") + "\n"
+        first.downto(last).map {|amount| verse(amount)}.join("\n") + "\n"
+    end
+
+    def sing
+        verses(99, 0)
     end
 end
