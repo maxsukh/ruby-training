@@ -38,8 +38,13 @@ describe Bottles do
     expect(bottles.verses(8, 6)).to eq(expected)
   end
 
+<<<<<<< HEAD
   it 'can sing the whole bottles' do
     #skip
+=======
+  it 'can sing the whole song' do
+    skip
+>>>>>>> upstream/main
     expect(bottles.sing).to eq(bottles.verses(99, 0))
   end
 end
