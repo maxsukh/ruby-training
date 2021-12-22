@@ -1,10 +1,10 @@
 RSpec.describe 'objects in ruby' do
-  it 'is fundamental - everything is an object' do
-    expect(10.is_a?(Object)).to eq(true)
-    expect(3.5.is_a?(Object)).to eq(true)
-    expect('string'.is_a?(Object)).to eq(true)
-    expect(nil.is_a?(Object)).to eq(true)
-    expect(Object.is_a?(Object)).to eq(true)
+  it 'is fundamental - everything in ruby is an object' do
+    expect(10.is_a?(Object)).to eq(__)
+    expect(3.5.is_a?(Object)).to eq(__)
+    expect('string'.is_a?(Object)).to eq(__)
+    expect(nil.is_a?(Object)).to eq(__)
+    expect(Object.is_a?(Object)).to eq(__)
   end
 
   it 'can be converted to a string' do
@@ -12,9 +12,9 @@ RSpec.describe 'objects in ruby' do
     expect(nil.to_s).to eq('')
   end
 
-  it 'can be inspected' do
-    expect(123.inspect).to eq('123')
-    expect(nil.inspect).to eq('nil')
+  it 'can be inspected (as if you had done so in a console)' do
+    expect(123.inspect).to eq(__)
+    expect(nil.inspect).to eq(__)
   end
 
   it 'has an id' do
