@@ -3,30 +3,62 @@
 class LCD
   def result(digit)
     if digit == 8
-      upper_part_of_digit(digit) + middle_part_of_digit(digit) + lower_part_of_digit(digit)
+      eight_hash(digit)
     else expected = 
-        <<~SQUIGLY_HEREDOC
-              _
-             | |
-             |_|         
+      <<~SQUIGLY_HEREDOC
+         _
+        | |
+        |_|         
        
-            SQUIGLY_HEREDOC
-        end
+      SQUIGLY_HEREDOC
     end
+  end
 end
 
-def upper_part_of_digit(number)
-    " _\n"      
+# def upper_part_of_digit(digit)
+#     " _\n"      
+# end
+
+# def middle_part_of_digit(digit)
+#     "|_|\n"  
+# end
+
+# def lower_part_of_digit(digit)
+#     "|_| "
+# end
+
+# def eight_hash(digit)
+#   value = 
+#     {
+#       upper_part_of_digit: " _\n",
+#       left_mid_part_of_digit: "|",
+#       middle_mid_part_of_digit: "_",
+#       right_mid_part_of_digit: " |\n",
+#       left_lower_part_of_digit: "|",
+#       middle_lower_part_of_digit: "_",
+#       right_lower_part_of_digit: " |"
+#     }
+#   value.values_at(
+#     :upper_part_of_digit,
+#     :left_mid_part_of_digit,
+#     :middle_mid_part_of_digit,
+#     :right_mid_part_of_digit
+#   )
+# end
+
+def eight_hash(digit)
+  eight_hash_up
 end
 
-def middle_part_of_digit(number)
-    "|_|\n"  
+def eight_hash_up(digit)
+  value = 
+    {
+      left_mid_part_of_digit: "|",
+      middle_mid_part_of_digit: "_",
+      right_mid_part_of_digit: " |\n"
+    }
+    value.values_at(:upper_part_of_digit + :middle_part_of_digit + :middle_lower_part_of_digit)
 end
-
-def lower_part_of_digit(number)
-    "|_| "
-end
-
 
 
 lcd = LCD.new
