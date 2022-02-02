@@ -10,6 +10,10 @@ class RuntimeMethodGenerator
     :predefined
   end
 
+  def add_a_method
+
+  end
+
   def return_funky
     :funky
   end
